@@ -1,0 +1,14 @@
+build/rqt_rover_gui
+devel/include/ublox_msgs
+php-mecab-master/mecab
+src/abridge/include
+src/diagnostics/src
+src/gazebo_plugins/src/GripperPlugin
+src/gazebo_plugins/src/ScorePlugin
+src/mobility/src
+src/rqt_rover_gui/src
+src/sbridge/src
+src/ublox/ublox_gps/include/ublox_gps
+src/ublox/ublox_msgs/include/ublox/serialization
+src/ublox/ublox_msgs/include/ublox_msgs
+src/ublox/ublox_serialization/include/ublox
