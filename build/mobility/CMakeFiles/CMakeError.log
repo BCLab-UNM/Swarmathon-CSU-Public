@@ -1,0 +1,53 @@
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/anil/rover_workspace/build/mobility/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec3131295067/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3131295067.dir/build.make CMakeFiles/cmTryCompileExec3131295067.dir/build
+make[1]: Entering directory `/home/anil/rover_workspace/build/mobility/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/anil/rover_workspace/build/mobility/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3131295067.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec3131295067.dir/CheckSymbolExists.c.o   -c /home/anil/rover_workspace/build/mobility/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTryCompileExec3131295067
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3131295067.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTryCompileExec3131295067.dir/CheckSymbolExists.c.o  -o cmTryCompileExec3131295067 -rdynamic 
+CMakeFiles/cmTryCompileExec3131295067.dir/CheckSymbolExists.c.o: In function `main':
+CheckSymbolExists.c:(.text+0x16): undefined reference to `pthread_create'
+collect2: error: ld returned 1 exit status
+make[1]: Leaving directory `/home/anil/rover_workspace/build/mobility/CMakeFiles/CMakeTmp'
+make[1]: *** [cmTryCompileExec3131295067] Error 1
+make: *** [cmTryCompileExec3131295067/fast] Error 2
+
+File /home/anil/rover_workspace/build/mobility/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/anil/rover_workspace/build/mobility/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec2575046128/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec2575046128.dir/build.make CMakeFiles/cmTryCompileExec2575046128.dir/build
+make[1]: Entering directory `/home/anil/rover_workspace/build/mobility/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/anil/rover_workspace/build/mobility/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2575046128.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTryCompileExec2575046128.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec2575046128
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2575046128.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTryCompileExec2575046128.dir/CheckFunctionExists.c.o  -o cmTryCompileExec2575046128 -rdynamic -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+make[1]: Leaving directory `/home/anil/rover_workspace/build/mobility/CMakeFiles/CMakeTmp'
+make[1]: *** [cmTryCompileExec2575046128] Error 1
+make: *** [cmTryCompileExec2575046128/fast] Error 2
+
+
